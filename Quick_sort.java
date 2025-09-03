@@ -1,4 +1,3 @@
-package DAA;
 import java.util.Scanner;
 
 public class Quick_sort {
@@ -13,10 +12,12 @@ public class Quick_sort {
             System.out.print(arr[i]+" ");
         }
         System.out.println();
-        Quick_sort(arr, 0, n-1);
+        quick_sort(arr, 0, n-1);
         for(int i=0; i<n; i++){
             System.out.print(arr[i]+" ");
         }
+        System.out.println();
+        sc.close();
     }
     public static int partition(int[] arr, int st, int end){
             int pivot = arr[end];
@@ -34,11 +35,11 @@ public class Quick_sort {
             arr[end] = temp;
             return idx+1;
     }
-    public static void Quick_sort(int[] arr, int st, int end){
+    public static void quick_sort(int[] arr, int st, int end){
         if(st<end){
             int pivotIndex= partition(arr, st, end);
-            Quick_sort(arr, st, pivotIndex-1);
-            Quick_sort(arr, pivotIndex+1, end);
+            quick_sort(arr, st, pivotIndex-1);
+            quick_sort(arr, pivotIndex+1, end);
         }
     }
 }
